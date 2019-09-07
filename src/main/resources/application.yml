@@ -1,0 +1,16 @@
+spring:
+  data:
+    rest:
+      base-path: /api
+  datasource:
+    url: jdbc:mysql://localhost:3306/movies_db
+    username: root
+    password: scorpion1
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect:org.hibernate.dialect.MySQL5Dialect
+
