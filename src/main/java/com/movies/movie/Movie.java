@@ -23,6 +23,11 @@ public class Movie {
     private String genre;
     private int runtime;
 
+    public Movie(String title, String language) {
+        this.title = title;
+        this.language = language;
+        //this.year = year;
+    }
 
     @Override
     public String toString() {
