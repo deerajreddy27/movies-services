@@ -1,10 +1,7 @@
 package com.movies.movie;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -31,6 +28,27 @@ public class MovieResource {
         else{
             throw new IllegalArgumentException();
         }
+
+    }
+
+    @DeleteMapping("/deleteById/{id}")
+    public void deleteById(@PathVariable("id") long id){
+      jdbcTemplateMovieRepository.deleteById(id);
+    }
+
+    @PostMapping("/insert")
+    public int insert(@RequestBody Movie movie) {
+        return jdbcTemplateMovieRepository.insert(movie);
+    }
+
+    @PutMapping("/update")
+    public void update(@RequestBody Movie movie) {
+        jdbcTemplateMovieRepository.update(movie);
+    }
+
+    @GetMapping("/findByTitleAndLanguage")
+    public Movie getByTitleAndLanguage(@RequestParam("title") String title, @RequestParam("language") String language){
+       return jdbcTemplateMovieRepository.findByTitleAndLanguage(title, language);
 
     }
 }

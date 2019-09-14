@@ -1,8 +1,6 @@
 package com.movies.movie;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +8,9 @@ import javax.persistence.Id;
 import java.time.LocalDate;
 
 @Entity
-@Getter @Setter @NoArgsConstructor
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Movie {
 
     @Id
@@ -27,6 +27,12 @@ public class Movie {
         this.title = title;
         this.language = language;
         //this.year = year;
+    }
+
+    public Movie(String title, String language, LocalDate year) {
+        this.title = title;
+        this.language = language;
+        this.year = year;
     }
 
     @Override
