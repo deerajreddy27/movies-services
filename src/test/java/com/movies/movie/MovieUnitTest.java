@@ -8,13 +8,21 @@ public class MovieUnitTest {
     @Test(expected = NullPointerException.class)
     public void whenTitleIsNull_ThenThrowNullPointerException(){
         Movie movie = new Movie(null,"EN");
-
     }
 
     @Test(expected = NullPointerException.class)
     public void whenLanguageIsNull_ThenThrowNullPointerException(){
         Movie movie = new Movie("XYZ",null);
+    }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void whenTitleIsBlank_ThenThrowIllegalArgumentException(){
+        Movie movie = new Movie(" ","EN");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void whenTitleIsEmplty_ThenThrowIllegalArgumentException(){
+        Movie movie = new Movie("","EN");
     }
 
     @Test
