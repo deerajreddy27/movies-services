@@ -31,6 +31,8 @@ public class Movie {
 
     public Movie(String title, String language) {
         Validate.notBlank(title);
+        Validate.notNull(title);
+        Validate.notEmpty(title);
         Validate.notNull(language);
         this.title = title;
         this.language = language;
