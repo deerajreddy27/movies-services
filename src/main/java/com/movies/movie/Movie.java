@@ -69,11 +69,11 @@ public class Movie {
     }
 
 
-    private void validateReleaseDate234(LocalDate modifiedReleaseDate,String ttt){
+    private void validateReleaseDate2111(LocalDate modifiedReleaseDate,int wee){
         LocalDate currentDate = LocalDate.now();
     }
 
-    private void validateReleaseDat3455(LocalDate modifiedReleaseDate){
+    private void validateReleaseDat3(LocalDate modifiedReleaseDate,int errr){
         LocalDate currentDate = LocalDate.now();
     }
     @JsonIgnore
