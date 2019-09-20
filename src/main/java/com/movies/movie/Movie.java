@@ -24,6 +24,7 @@ public class Movie {
 
     @Id
     @GeneratedValue
+    @JsonIgnore
     private Long id;
     @NotBlank
     private String title;
@@ -31,6 +32,7 @@ public class Movie {
     private String language;
     private LocalDate year;
     private LocalDate releasedate;
+    @NotBlank
     private String genre;
     private int runtime;
 
@@ -57,6 +59,19 @@ public class Movie {
 
 
     private void validateReleaseDate(LocalDate modifiedReleaseDate){
+        LocalDate currentDate = LocalDate.now();
+    }
+
+    private void validateReleaseDate1(LocalDate modifiedReleaseDate){
+        LocalDate currentDate = LocalDate.now();
+    }
+
+
+    private void validateReleaseDate2(LocalDate modifiedReleaseDate){
+        LocalDate currentDate = LocalDate.now();
+    }
+
+    private void validateReleaseDat3(LocalDate modifiedReleaseDate){
         LocalDate currentDate = LocalDate.now();
     }
     @JsonIgnore
