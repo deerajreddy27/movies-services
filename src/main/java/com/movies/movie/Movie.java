@@ -36,6 +36,8 @@ public class Movie {
     private String genre;
     private int runtime;
 
+    private int test;
+
     private Movie(String title, String language) {
         this.title = title;
         this.language = language;
@@ -62,7 +64,7 @@ public class Movie {
         LocalDate currentDate = LocalDate.now();
     }
 
-    private void validateReleaseDate1(LocalDate modifiedReleaseDate){
+    private void validateReleaseDate1(LocalDate modifiedReleaseDate,String one){
         LocalDate currentDate = LocalDate.now();
     }
 
