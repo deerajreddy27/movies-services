@@ -34,6 +34,8 @@ public class Movie {
     private String genre;
     private int runtime;
 
+    private int test;
+
     private Movie(String title, String language) {
         this.title = title;
         this.language = language;
@@ -57,6 +59,14 @@ public class Movie {
 
 
     private void validateReleaseDate(LocalDate modifiedReleaseDate){
+        LocalDate currentDate = LocalDate.now();
+    }
+
+    private void validateReleaseDate1(LocalDate modifiedReleaseDate,String two){
+        LocalDate currentDate = LocalDate.now();
+    }
+
+    private void validateReleaseDate2(LocalDate modifiedReleaseDate,String three){
         LocalDate currentDate = LocalDate.now();
     }
     @JsonIgnore
